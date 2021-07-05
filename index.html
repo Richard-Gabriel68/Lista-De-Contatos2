@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Contatos2</title>
+</head>
+<body>
+    <div id="app">
+        <section class="more">
+            <h3>Pesquisar</h3>
+            <input v-model="pesquisa">
+            <p>
+                Total de contatos: {{ lista.length }}
+            </p>
+        </section>
+
+        <section class="list">
+            <h3>Contatos</h3>
+
+            <div class="container-c" >
+                <div class="contato" v-for='item in lista'>{{ item.nome }}</div>
+            </div>
+
+            <button class="add">
+                Adicioar novo
+            </button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

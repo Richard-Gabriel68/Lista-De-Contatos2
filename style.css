@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+    height: 60vh;
+    width: 55vw;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: gray;
+
+    display: flex;
+}
+#app .more {
+    flex: 1;
+    background-color: rgb(214, 217, 218);
+}
+
+/* MORE ----------------------------*/
+#app .more {
+    text-align: center;
+    padding-top: 1rem;
+}
+#app .more input {
+    align-self: center;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border: none;
+}
+#app .more p {
+    margin-top: 2rem;
+}
+
+/* LISTA ---------------------------*/
+
+#app .list {
+    flex: 1;
+    background-color: rgb(216, 241, 241);
+
+    text-align: center;
+}
+#app .list h3 {
+    margin: 1rem 0;
+} 
+.container-c {
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+.container-c .contato {
+    background-color: rgb(92, 179, 205);
+    padding: 0.5rem;
+    width: auto;   
+}
+.add {
+    margin-top: 2rem;
+    width: 40%;
+    padding: 0.5rem;
+    background-color: rgb(132, 85, 167);
+    align-self: center;
+    border: none;
+}
