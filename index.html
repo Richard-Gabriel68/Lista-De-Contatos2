@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="vue.js"></script>
+    <script src="https://kit.fontawesome.com/557a9eecff.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -28,8 +29,8 @@
         </section>
 
         <section class="mostrar" v-else-if="mostrar" >
-            <!--Icone-->
-            <h3></h3>
+            <i class="fas fa-user"></i>
+            <h3 class="t"></h3>
             <p class="tel"></p>
         </section>
 
@@ -40,7 +41,10 @@
             <h3>Contatos</h3>
 
             <div class="container-c" >
-                <div class="contato" v-for='item in listaF' @click='show'>{{ item.nome }}</div>
+                <div class="contato" v-for='item in listaF' @click='show($event)'>
+                    {{ item.nome }}
+                    <div>{{ item.tel }}</div>
+                </div>
             </div>
 
             <button class="add" @click="create">

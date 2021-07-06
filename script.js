@@ -10,9 +10,9 @@ let app = new Vue ({
         nome: '',
         tel: '',
 
-        adicionar : true,
+        adicionar : false,
         pesquisar: false,
-        mostrar: false
+        mostrar: true
     },
     methods: {
         create: function(){
@@ -31,11 +31,20 @@ let app = new Vue ({
             this.adicionar = false;
             this.pesquisar = true;
             this.mostrar = false;
+
         },
-        show: function(){
+        show: function(e){
             this.adicionar = false;
             this.pesquisar = false;
             this.mostrar = true;
+
+            let nome = document.querySelector('.mostrar .t');
+
+            nome.innerHTML = e.target.innerHTML
+
+           console.log(e.target.innerHTML)
+            
+            
         }
     },
     computed: {
