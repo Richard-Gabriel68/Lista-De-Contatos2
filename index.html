@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Contatos2</title>
 </head>
 <body>
     <div id="app">
-        <section class="more">
+        <section class="more" v-if="pesquisar">
             <h3>Pesquisar</h3>
             <input v-model="pesquisa">
             <p>
@@ -17,17 +19,35 @@
             </p>
         </section>
 
+        <section class="adicionar" v-else-if="adicionar">
+            <h3>Adicionar novo</h3>
+            <input v-model="nome" placeholder="nome">
+            <input type="number" placeholder="telefone" v-model="tel" >
+            <button class="add" @click='add'>Adicionar</button>
+            <button class="goBack" @click='goBack'>Voltar</button>
+        </section>
+
+        <section class="mostrar" v-else-if="mostrar" >
+            <!--Icone-->
+            <h3></h3>
+            <p class="tel"></p>
+        </section>
+
+
+
+
         <section class="list">
             <h3>Contatos</h3>
 
             <div class="container-c" >
-                <div class="contato" v-for='item in lista'>{{ item.nome }}</div>
+                <div class="contato" v-for='item in listaF' @click='show'>{{ item.nome }}</div>
             </div>
 
-            <button class="add">
-                Adicioar novo
+            <button class="add" @click="create">
+                Criar novo
             </button>
         </section>
+
     </div>
 
     <script src="script.js"></script>
