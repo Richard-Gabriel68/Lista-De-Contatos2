@@ -11,8 +11,8 @@ let app = new Vue ({
         tel: '',
 
         adicionar : false,
-        pesquisar: false,
-        mostrar: true
+        pesquisar: true,
+        mostrar: false
     },
     methods: {
         create: function(){
@@ -37,14 +37,11 @@ let app = new Vue ({
             this.adicionar = false;
             this.pesquisar = false;
             this.mostrar = true;
-
+            
             let nome = document.querySelector('.mostrar .t');
 
-            nome.innerHTML = e.target.innerHTML
-
-           console.log(e.target.innerHTML)
-            
-            
+            nome.innerHTML = e.target.innerHTML;
+ 
         }
     },
     computed: {

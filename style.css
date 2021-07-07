@@ -88,11 +88,18 @@ body {
 .mostrar h3 {
     margin-top: 1rem;
     text-align: center;
+    padding: 0.5rem 2rem 3rem 2rem;
+    background-color: rgb(172, 171, 171);
+    border-radius: 15px;
+    
 }
 .mostrar h3 div {
     margin-top: 0.5rem;
     color: rgb(65, 56, 75);
     font-weight: normal;
+    padding: 0.5rem;
+    background-color: lavender;
+    border-radius: 15px;
 }
 /* LISTA -------------------------------------------*/
 
@@ -134,4 +141,16 @@ body {
     align-self: center;
     border: none;
     cursor: pointer;
+}
+
+/*  RESPONSIVE --------------------*/
+
+@media (max-width: 550px) {
+    #app {
+        margin-top: 0;
+        flex-direction: column-reverse;
+        width: 100vw;
+        height: 100vh;
+        font-size: 20px;
+    }
 }
