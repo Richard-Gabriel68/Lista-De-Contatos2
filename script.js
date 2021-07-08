@@ -39,7 +39,6 @@ let app = new Vue ({
             this.mostrar = true;
             
             let nome = document.querySelector('.mostrar .t');
-
             nome.innerHTML = e.target.innerHTML;
  
         }
